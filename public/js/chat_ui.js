@@ -29,7 +29,7 @@ $(document).ready(function(){
 	socket.on('rooms',function(rooms){
 		$('#room-list').empty();
 		for(var room in rooms){
-			room = room.subString(1,room.length);
+			room = room.substring(1,room.length);
 			if(room !== ''){
 				$('#room-list').append(divEscapedContentElement(room));
 			}
